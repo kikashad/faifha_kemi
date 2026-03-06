@@ -35,7 +35,6 @@
             overflow-x: hidden
         }
 
-        /* ========== CANVAS BG ========== */
         #cv {
             position: fixed;
             inset: 0;
@@ -43,7 +42,6 @@
             pointer-events: none
         }
 
-        /* nebula blobs */
         .blob {
             position: fixed;
             border-radius: 50%;
@@ -106,7 +104,6 @@
             }
         }
 
-        /* grid */
         .grd {
             position: fixed;
             inset: 0;
@@ -117,7 +114,6 @@
             mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%)
         }
 
-        /* ========== NAV ========== */
         nav {
             position: fixed;
             top: 0;
@@ -213,7 +209,6 @@
             box-shadow: 0 0 38px rgba(0, 240, 255, .7)
         }
 
-        /* ========== HERO ========== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -349,7 +344,6 @@
             transform: translateY(-4px)
         }
 
-        /* hero 3D atom */
         .hvisual {
             position: absolute;
             right: 7%;
@@ -518,7 +512,6 @@
             }
         }
 
-        /* planet top-right */
         .planet {
             position: absolute;
             right: -90px;
@@ -545,7 +538,6 @@
             box-shadow: 0 0 25px rgba(0, 240, 255, .08)
         }
 
-        /* scroll hint */
         .shint {
             position: absolute;
             bottom: 26px;
@@ -581,7 +573,6 @@
             }
         }
 
-        /* ========== FEATURE STRIP ========== */
         .fstrip {
             background: rgba(1, 7, 20, .8);
             backdrop-filter: blur(14px);
@@ -651,7 +642,6 @@
             margin-top: 3px
         }
 
-        /* ========== MAIN CONTENT ========== */
         .main {
             max-width: 1200px;
             margin: 0 auto;
@@ -690,7 +680,6 @@
             font-size: .98rem
         }
 
-        /* LESSON GRID */
         .lgrid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -795,7 +784,6 @@
             gap: 9px
         }
 
-        /* FORMULA SECTION */
         .fsec {
             margin-bottom: 66px
         }
@@ -878,7 +866,6 @@
             line-height: 1.62
         }
 
-        /* ========== MODAL ========== */
         .mov {
             display: none;
             position: fixed;
@@ -1026,11 +1013,10 @@
             color: #fff
         }
 
-        /* ========== FOOTER ========== */
         footer {
             background: rgba(1, 5, 18, .98);
             border-top: 1px solid rgba(0, 240, 255, .08);
-            padding: 65px 50px 40px;
+            padding: 50px 50px 35px;
             position: relative;
             z-index: 5
         }
@@ -1049,63 +1035,6 @@
         .fi2 {
             max-width: 980px;
             margin: 0 auto
-        }
-
-        .ftcard {
-            display: flex;
-            align-items: center;
-            gap: 38px;
-            background: linear-gradient(135deg, rgba(4, 12, 50, .92), rgba(1, 7, 22, .92));
-            border: 1px solid rgba(0, 240, 255, .16);
-            border-radius: 22px;
-            padding: 40px;
-            margin-bottom: 38px;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(12px)
-        }
-
-        .ftcard::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--c), var(--p), transparent)
-        }
-
-        .tphoto {
-            width: 148px;
-            height: 148px;
-            border-radius: 17px;
-            object-fit: cover;
-            flex-shrink: 0;
-            border: 2.5px solid rgba(0, 240, 255, .35);
-            box-shadow: 0 0 40px rgba(0, 240, 255, .25), 0 0 80px rgba(0, 240, 255, .1)
-        }
-
-        .tinfo h2 {
-            font-family: 'Kanit', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 7px
-        }
-
-        .tinfo .rnk {
-            color: var(--c);
-            font-size: .97rem;
-            margin-bottom: 16px
-        }
-
-        .tinfo .sch {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            color: rgba(255, 255, 255, .62);
-            font-size: .91rem;
-            margin-bottom: 7px
         }
 
         .cgrid {
@@ -1150,7 +1079,6 @@
             font-weight: 700
         }
 
-        /* responsive */
         @media(max-width:768px) {
 
             .lgrid,
@@ -1158,11 +1086,6 @@
             .cgrid,
             .fstrip {
                 grid-template-columns: 1fr
-            }
-
-            .ftcard {
-                flex-direction: column;
-                text-align: center
             }
 
             .hvisual,
@@ -1198,7 +1121,6 @@
     <div class="blob b4"></div>
     <div class="grd"></div>
 
-    <!-- NAV -->
     <nav>
         <a href="#" class="nlogo">
             <div class="nicon">🧪</div>SCIENCE<span>HUB</span>
@@ -1207,13 +1129,12 @@
             <li><a href="#home">หน้าหลัก</a></li>
             <li><a href="#lessons">บทเรียน</a></li>
             <li><a href="#formulas">สูตร</a></li>
-            <li><a href="#teacher">ครูผู้สอน</a></li>
+            <li><a href="#info">ข้อมูล</a></li>
         </ul>
         <button class="nbtn"
             onclick="document.getElementById('lessons').scrollIntoView({behavior:'smooth'})">เริ่มเรียน</button>
     </nav>
 
-    <!-- HERO -->
     <section class="hero" id="home">
         <div class="planet"></div>
         <div class="hc">
@@ -1259,7 +1180,6 @@
         </div>
     </section>
 
-    <!-- FEATURE STRIP -->
     <div class="fstrip">
         <div class="fc">
             <div class="fi b">🔬</div>
@@ -1284,10 +1204,8 @@
         </div>
     </div>
 
-    <!-- MAIN -->
     <div class="main">
 
-        <!-- LESSONS -->
         <section id="lessons">
             <div class="sec-head">
                 <div class="stag">⚡ เนื้อหาจาก scimath.org</div>
@@ -1303,8 +1221,8 @@
                                 Number</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">ค่าประจุไฟฟ้าสมมติของอะตอม หลักเกณฑ์ 6 ข้อ พร้อมตัวอย่างการคำนวณ</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">ค่าประจุไฟฟ้าสมมติของอะตอม หลักเกณฑ์ 6 ข้อ พร้อมตัวอย่างการคำนวณ</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1327,8 +1245,8 @@
                                 I</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">หลักการเซลล์กัลวานิก ขั้วแอโนด แคโทด สะพานเกลือ และการเกิดกระแสไฟฟ้า</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">หลักการเซลล์กัลวานิก ขั้วแอโนด แคโทด สะพานเกลือ และการเกิดกระแสไฟฟ้า</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1339,8 +1257,8 @@
                                 II</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">แรงเคลื่อนไฟฟ้า EMF ความต่างศักย์ และชนิดของเซลล์ปฐมภูมิ-ทุติยภูมิ</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">แรงเคลื่อนไฟฟ้า EMF ความต่างศักย์ และชนิดของเซลล์ปฐมภูมิ-ทุติยภูมิ</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1351,8 +1269,8 @@
                                 Notation</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">รูปแบบการเขียน Cell notation แสดงแอโนด แคโทด สะพานเกลือ</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">รูปแบบการเขียน Cell notation แสดงแอโนด แคโทด สะพานเกลือ</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1363,8 +1281,8 @@
                                 style="opacity:.65;font-weight:400">Electrolytic Cell I</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">เซลล์ที่ใช้ไฟฟ้าบังคับให้เกิดปฏิกิริยา การชุบโลหะด้วยไฟฟ้า</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">เซลล์ที่ใช้ไฟฟ้าบังคับให้เกิดปฏิกิริยา การชุบโลหะด้วยไฟฟ้า</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1375,8 +1293,8 @@
                                 style="opacity:.65;font-weight:400">Electrolysis</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">อิเล็กโทรลิซิส: แยกน้ำ แยก NaCl และกฎฟาราเดย์</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">อิเล็กโทรลิซิส: แยกน้ำ แยก NaCl และกฎฟาราเดย์</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1387,8 +1305,8 @@
                                 Cell Review</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">ทบทวนองค์ประกอบ สรุปความสัมพันธ์ E°cell กับ ΔG° และ Keq</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">ทบทวนองค์ประกอบ สรุปความสัมพันธ์ E°cell กับ ΔG° และ Keq</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1399,8 +1317,8 @@
                                 style="opacity:.65;font-weight:400">Standard Electrode Potential</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">ค่า E° เทียบกับ SHE ตารางศักย์ไฟฟ้าครึ่งเซลล์มาตรฐานของธาตุต่างๆ</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">ค่า E° เทียบกับ SHE ตารางศักย์ไฟฟ้าครึ่งเซลล์มาตรฐานของธาตุต่างๆ</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1411,8 +1329,8 @@
                                 of E°</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">ทำนายทิศทางปฏิกิริยา เปรียบเทียบตัวออกซิไดส์ สมการเนิร์นสต์</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">ทำนายทิศทางปฏิกิริยา เปรียบเทียบตัวออกซิไดส์ สมการเนิร์นสต์</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1423,8 +1341,8 @@
                                 Cell</small></div>
                     </div>
                     <div class="lbody">
-                        <p class="lprev">ถ่านไฟฉาย ถ่านอัลคาไลน์ เซลล์เชื้อเพลิง H₂-O₂ หลักการทำงาน</p><button
-                            class="lbtn">อ่านเพิ่มเติม →</button>
+                        <p class="lprev">ถ่านไฟฉาย ถ่านอัลคาไลน์ เซลล์เชื้อเพลิง H₂-O₂ หลักการทำงาน</p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
@@ -1436,14 +1354,14 @@
                     </div>
                     <div class="lbody">
                         <p class="lprev">กลไกการเกิดสนิม ปัจจัยที่มีผล วิธีป้องกัน Galvanization และ Cathodic Protection
-                        </p><button class="lbtn">อ่านเพิ่มเติม →</button>
+                        </p>
+                        <button class="lbtn">อ่านเพิ่มเติม →</button>
                     </div>
                 </div>
 
-            </div><!-- end lgrid -->
+            </div>
         </section>
 
-        <!-- FORMULAS -->
         <section id="formulas" class="fsec">
             <div class="fbigtit">📐 สูตรทั้งหมดในบทไฟฟ้าเคมี</div>
             <p class="fdescr">รวบรวมสูตรสำคัญทุกสูตรที่จำเป็นต้องรู้ในบทเรียนไฟฟ้าเคมี ม.5</p>
@@ -1459,8 +1377,8 @@
                 <div class="fcard">
                     <div class="fcard-t">🔋 พลังงานอิสระกิบส์กับแรงดันไฟฟ้า</div>
                     <div class="fcard-eq">ΔG° = −nFE°<sub>cell</sub></div>
-                    <p class="fcard-d">n = จำนวนโมลอิเล็กตรอนที่ถ่ายเท | F = 96,485 C/mol (ค่าคงที่ฟาราเดย์) | ΔG° < 0
-                            เกิดเอง</p>
+                    <p class="fcard-d">n = จำนวนโมลอิเล็กตรอนที่ถ่ายเท | F = 96,485 C/mol (ค่าคงที่ฟาราเดย์) | ΔG° &lt;
+                        0 เกิดเอง</p>
                 </div>
 
                 <div class="fcard">
@@ -1506,22 +1424,10 @@
             </div>
         </section>
 
-    </div><!-- end main -->
+    </div>
 
-    <!-- FOOTER -->
-    <footer id="teacher">
+    <footer id="info">
         <div class="fi2">
-            <div class="ftcard">
-                <img src="data:image/jpeg;base64,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"
-                    alt="ครูมาลัย ฟองนิ้ว" class="tphoto">
-                <div class="tinfo">
-                    <h2>นางสาวมาลัย ฟองนิ้ว</h2>
-                    <div class="rnk">⭐ ครูชำนาญการพิเศษ — กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี</div>
-                    <div class="sch">🏫 โรงเรียนเทิงวิทยาคม จังหวัดเชียงราย</div>
-                    <div class="sch">📚 วิชาเคมี | ระดับชั้นมัธยมศึกษาปีที่ 5</div>
-                    <div class="sch">🔬 หน่วยการเรียนรู้ : ไฟฟ้าเคมี (Electrochemistry)</div>
-                </div>
-            </div>
             <div class="cgrid">
                 <div class="ci">
                     <h4>📌 โรงเรียน</h4>
@@ -1543,7 +1449,7 @@
         </div>
     </footer>
 
-    <!-- ===== 12 MODALS ===== -->
+    <!-- 12 MODALS -->
 
     <div class="mov" id="m1">
         <div class="mbox"><button class="mcl" onclick="closeM('m1')">✕</button>
@@ -1560,8 +1466,7 @@
                     <li><strong>ข้อ 2:</strong> H ในสารประกอบทั่วไป (HCl, H₂O, H₂SO₄) = <strong>+1</strong> แต่ใน
                         hydride ของโลหะ (NaH, CaH₂) = <strong>−1</strong></li>
                     <li><strong>ข้อ 3:</strong> O ในสารประกอบทั่วไป = <strong>−2</strong> | ใน peroxide (H₂O₂, BaO₂) =
-                        <strong>−1</strong> | ใน superoxide = <strong>−½</strong> | ใน OF₂ = <strong>+2</strong>
-                    </li>
+                        <strong>−1</strong> | ใน superoxide = <strong>−½</strong> | ใน OF₂ = <strong>+2</strong></li>
                     <li><strong>ข้อ 4:</strong> ไอออนอะตอมเดียว ON = ค่าประจุจริง (Mg²⁺ = +2, F⁻ = −1)</li>
                     <li><strong>ข้อ 5:</strong> ไอออนหลายอะตอม ผลรวม ON = ประจุของไอออน (SO₄²⁻ รวม = −2, NH₄⁺ รวม = +1)
                     </li>
@@ -1575,7 +1480,7 @@
                 </ul>
                 <h3>ตัวอย่างการคำนวณ</h3>
                 <div class="fb">จงหา ON ของ Cr ใน [Cr(H₂O)₄Cl₂]ClO₄
-                    H₂O = 0, Cl⁻ = −1, ClO₄⁻ = −1
+                    H��O = 0, Cl⁻ = −1, ClO₄⁻ = −1
                     ให้ Cr = A
                     A + (0×4) + (−1×2) + (−1) = 0
                     A − 2 − 1 = 0 → A = +3
@@ -1665,441 +1570,357 @@
                         emf)</strong> มีหน่วยเป็นโวลต์ (V)</p>
                 <div class="fb">E°cell = E°cathode − E°anode
                     ถ้า E°cell > 0 → ปฏิกิริยาเกิดเองได้ (spontaneous)
-                    ถ้า E°cell < 0 → ต้องใช้ไฟฟ้าบังคับ</div>
-                        <h3>เซลล์แห้ง (Dry Cell / Leclanché Cell)</h3>
-                        <p>กล่องสังกะสี (Zn) ทำหน้าที่เป็นแอโนด ไส้ถ่าน (C) เป็นแคโทด อิเล็กโทรไลต์เป็นของแข็งกึ่งเหลว
-                            (NH₄Cl และ ZnCl₂ ผสมกับแป้ง)</p>
-                        <div class="fb">แอโนด: Zn(s) → Zn²⁺ + 2e⁻
-                            แคโทด: 2MnO₂ + 2NH₄⁺ + 2e⁻ → Mn₂O₃ + 2NH₃ + H₂O
-                            แรงดัน: ~1.5 V</div>
-                        <h3>เซลล์อัลคาไลน์ (Alkaline Battery)</h3>
-                        <div class="fb">แอโนด: Zn + 2OH⁻ → ZnO + H₂O + 2e⁻
-                            แคโทด: MnO₂ + H₂O + 2e⁻ → Mn(OH)₂ + 2OH⁻ → ~1.5 V</div>
-                        <h3>เซลล์ทุติยภูมิ: แบตเตอรี่ตะกั่ว-กรด (Lead-Acid)</h3>
-                        <div class="fb">แอโนด: Pb + SO₄²⁻ → PbSO₄ + 2e⁻
-                            แคโทด: PbO₂ + SO₄²⁻ + 4H⁺ + 2e⁻ → PbSO₄ + 2H₂O → ~2 V ต่อเซลล์</div>
-                </div>
+                    ถ้า E°cell &lt; 0 → ต้องใช้ไฟฟ้าบังคับ</div>
+                <h3>เซลล์แห้ง (Dry Cell / Leclanché Cell)</h3>
+                <p>กล่องสังกะสี (Zn) ทำหน้าที่เป็นแอโนด ไส้ถ่าน (C) เป็นแคโทด อิเล็กโทรไลต์เป็นของแข็งกึ่งเหลว (NH₄Cl
+                    และ ZnCl₂ ผสมกับแป้ง)</p>
+                <div class="fb">แอโนด: Zn(s) → Zn²⁺ + 2e⁻
+                    แคโทด: 2MnO₂ + 2NH₄⁺ + 2e⁻ → Mn₂O₃ + 2NH₃ + H₂O
+                    แรงดัน: ~1.5 V</div>
+                <h3>เซลล์อัลคาไลน์ (Alkaline Battery)</h3>
+                <div class="fb">แอโนด: Zn + 2OH⁻ → ZnO + H₂O + 2e⁻
+                    แคโทด: MnO₂ + H₂O + 2e⁻ → Mn(OH)₂ + 2OH⁻ → ~1.5 V</div>
+                <h3>เซลล์ทุติยภูมิ: แบตเตอรี่ตะกั่ว-กรด (Lead-Acid)</h3>
+                <div class="fb">แอโนด: Pb + SO₄²⁻ → PbSO₄ + 2e⁻
+                    แคโทด: PbO₂ + SO₄²⁻ + 4H⁺ + 2e⁻ → PbSO₄ + 2H₂O → ~2 V ต่อเซลล์</div>
             </div>
         </div>
+    </div>
 
-        <div class="mov" id="m5">
-            <div class="mbox"><button class="mcl" onclick="closeM('m5')">✕</button>
-                <div class="mnum">บทเรียนที่ 5</div>
-                <h2 class="mtit">การเขียนแผนภาพเซลล์กัลวานิก (Cell Notation)</h2>
-                <div class="mc">
-                    <p>การเขียนแผนภาพเซลล์เป็นรูปแบบย่อสำหรับแสดงองค์ประกอบของเซลล์กัลวานิก</p>
-                    <h3>หลักการเขียน</h3>
-                    <ul>
-                        <li>เขียนสารที่ขั้ว<strong>แอโนด</strong>ทาง<strong>ซ้าย</strong> (ออกซิเดชัน)</li>
-                        <li>เขียนสารที่ขั้ว<strong>แคโทด</strong>ทาง<strong>ขวา</strong> (รีดักชัน)</li>
-                        <li>ใช้ <code>|</code> (เส้นเดี่ยว) แทนขอบเขตระหว่างเฟส</li>
-                        <li>ใช้ <code>||</code> (เส้นคู่) แทน<strong>สะพานเกลือ</strong></li>
-                        <li>ถ้าใช้ขั้วเฉื่อย เช่น Pt ให้ระบุก่อนสารในครึ่งเซลล์</li>
-                    </ul>
-                    <div class="fb">รูปแบบ: แอโนด | สารละลายแอโนด || สารละลายแคโทด | แคโทด
+    <div class="mov" id="m5">
+        <div class="mbox"><button class="mcl" onclick="closeM('m5')">✕</button>
+            <div class="mnum">บทเรียนที่ 5</div>
+            <h2 class="mtit">การเขียนแผนภาพเซลล์กัลวานิก (Cell Notation)</h2>
+            <div class="mc">
+                <p>การเขียนแผนภาพเซลล์เป็นรูปแบบย่อสำหรับแสดงองค์ประกอบของเซลล์กัลวานิก</p>
+                <h3>หลักการเขียน</h3>
+                <ul>
+                    <li>เขียนสารที่ขั้ว<strong>แอโนด</strong>ทาง<strong>ซ้าย</strong> (ออกซิเดชัน)</li>
+                    <li>เขียนสารที่ขั้ว<strong>แคโทด</strong>ทาง<strong>ขวา</strong> (รีดักชัน)</li>
+                    <li>ใช้ <code>|</code> (เส้นเดี่ยว) แทนขอบเขตระหว่างเฟส</li>
+                    <li>ใช้ <code>||</code> (เส้นคู่) แทน<strong>สะพานเกลือ</strong></li>
+                    <li>ถ้าใช้ขั้วเฉื่อย เช่น Pt ให้ระบุก่อนสารในครึ่งเซลล์</li>
+                </ul>
+                <div class="fb">รูปแบบ: แอโนด | สารละลายแอโนด || สารละลายแคโทด | แคโทด
 
-                        ตัวอย่าง 1 (Daniel Cell):
-                        Zn(s) | Zn²⁺(aq, 1M) || Cu²⁺(aq, 1M) | Cu(s) E° = +1.10 V
+                    ตัวอย่าง 1 (Daniel Cell):
+                    Zn(s) | Zn²⁺(aq, 1M) || Cu²⁺(aq, 1M) | Cu(s) E° = +1.10 V
 
-                        ตัวอย่าง 2 (ขั้วเฉื่อย Pt):
-                        Pt | H₂(g, 1atm) | H⁺(aq, 1M) || Cu²⁺(aq, 1M) | Cu(s)
+                    ตัวอย่าง 2 (ขั้วเฉื่อย Pt):
+                    Pt | H₂(g, 1atm) | H⁺(aq, 1M) || Cu²⁺(aq, 1M) | Cu(s)
 
-                        ตัวอย่าง 3 (หลายไอออนในครึ่งเซลล์):
-                        Pt | Fe²⁺(aq), Fe³⁺(aq) || Ag⁺(aq) | Ag(s)</div>
-                </div>
+                    ตัวอย่าง 3 (หลายไอออนในครึ่งเซลล์):
+                    Pt | Fe²⁺(aq), Fe³⁺(aq) || Ag⁺(aq) | Ag(s)</div>
             </div>
         </div>
+    </div>
 
-        <div class="mov" id="m6">
-            <div class="mbox"><button class="mcl" onclick="closeM('m6')">✕</button>
-                <div class="mnum">บทเรียนที่ 6</div>
-                <h2 class="mtit">เซลล์อิเล็กโทรไลต์ (Electrolytic Cell)</h2>
-                <div class="mc">
-                    <p><strong>เซลล์อิเล็กโทรไลต์</strong>
-                        คือเซลล์ที่ต้องใช้พลังงานไฟฟ้าจากภายนอกบังคับให้ปฏิกิริยาที่ไม่เกิดขึ้นเองเกิดขึ้น
-                        (nonspontaneous: E°cell &lt; 0, ΔG° &gt; 0)</p>
-                    <h3>เปรียบเทียบเซลล์กัลวานิก vs เซลล์อิเล็กโทรไลต์</h3>
-                    <ul>
-                        <li>เซลล์กัลวานิก: เคมี → ไฟฟ้า | E°cell &gt; 0 | ΔG° &lt; 0</li>
-                        <li>เซลล์อิเล็กโทรไลต์: ไฟฟ้า → เคมี | E°cell &lt; 0 | ΔG° &gt; 0</li>
-                    </ul>
-                    <h3>การชุบโลหะด้วยไฟฟ้า (Electroplating)</h3>
-                    <ul>
-                        <li><strong>แคโทด</strong> = วัตถุที่ต้องการชุบ (โลหะตกตะกอนลงบน)</li>
-                        <li><strong>แอโนด</strong> = โลหะที่ใช้ชุบ (ละลายเข้าไปแทน)</li>
-                        <li>จุ่มในสารละลายเกลือของโลหะที่ต้องการชุบ</li>
-                    </ul>
-                    <div class="fb">มวลโลหะที่ชุบได้ (กฎฟาราเดย์):
-                        m = (M × I × t) / (n × F)
-                        M = มวลโมลาร์ (g/mol)
-                        n = จำนวนอิเล็กตรอนที่ถ่ายเทต่อไอออน
-                        F = 96,485 C/mol
-                        I = กระแส (A), t = เวลา (s)</div>
-                </div>
+    <div class="mov" id="m6">
+        <div class="mbox"><button class="mcl" onclick="closeM('m6')">✕</button>
+            <div class="mnum">บทเรียนที่ 6</div>
+            <h2 class="mtit">เซลล์อิเล็กโทรไลต์ (Electrolytic Cell)</h2>
+            <div class="mc">
+                <p><strong>เซลล์อิเล็กโทรไลต์</strong>
+                    คือเซลล์ที่ต้องใช้พลังงานไฟฟ้าจากภายนอกบังคับให้ปฏิกิริยาที่ไม่เกิดขึ้นเองเกิดขึ้น (nonspontaneous:
+                    E°cell &lt; 0, ΔG° &gt; 0)</p>
+                <h3>เปรียบเทียบเซลล์กัลวานิก vs เซลล์อิเล็กโทรไลต์</h3>
+                <ul>
+                    <li>เซลล์กัลวานิก: เคมี → ไฟฟ้า | E°cell &gt; 0 | ΔG° &lt; 0</li>
+                    <li>เซลล์อิเล็กโทรไลต์: ไฟฟ้า → เคมี | E°cell &lt; 0 | ΔG° &gt; 0</li>
+                </ul>
+                <h3>การชุบโลหะด้วยไฟฟ้า (Electroplating)</h3>
+                <ul>
+                    <li><strong>แคโทด</strong> = วัตถุที่ต้องการชุบ (โลหะตกตะกอนลงบน)</li>
+                    <li><strong>แอโนด</strong> = โลหะที่ใช้ชุบ (ละลายเข้าไปแทน)</li>
+                    <li>จุ่มในสารละลายเกลือของโลหะที่ต้องการชุบ</li>
+                </ul>
+                <div class="fb">มวลโลหะที่ชุบได้ (กฎฟาราเดย์):
+                    m = (M × I × t) / (n × F)
+                    M = มวลโมลาร์ (g/mol)
+                    n = จำนวนอิเล็กตรอนที่ถ่ายเทต่อไอออน
+                    F = 96,485 C/mol
+                    I = กระแส (A), t = เวลา (s)</div>
             </div>
         </div>
+    </div>
 
-        <div class="mov" id="m7">
-            <div class="mbox"><button class="mcl" onclick="closeM('m7')">✕</button>
-                <div class="mnum">บทเรียนที่ 7</div>
-                <h2 class="mtit">การแยกสารละลายด้วยไฟฟ้า (Electrolysis)</h2>
-                <div class="mc">
-                    <p><strong>อิเล็กโทรลิซิส</strong> คือกระบวนการใช้กระแสไฟฟ้าทำให้สารเกิดการสลายตัว</p>
-                    <h3>การแยกน้ำ (Water Electrolysis)</h3>
-                    <div class="fb">แคโทด (รีดักชัน): 2H₂O + 2e⁻ → H₂(g) + 2OH⁻(aq)
-                        แอโนด (ออกซิเดชัน): 2H₂O → O₂(g) + 4H⁺(aq) + 4e⁻
-                        ──────────────────────────────────────────
-                        สมการรวม: 2H₂O → 2H₂(g) + O₂(g)</div>
-                    <h3>การแยกสารละลาย NaCl</h3>
-                    <div class="fb">แคโทด: 2H₂O + 2e⁻ → H₂(g) + 2OH⁻ → ได้ H₂
-                        แอโนด: 2Cl⁻ → Cl₂(g) + 2e⁻ → ได้ Cl₂
-                        สารละลาย: Na⁺ + OH⁻ → NaOH
-                        ผลิตภัณฑ์: H₂, Cl₂, NaOH</div>
-                    <h3>การแยก NaCl หลอมเหลว</h3>
-                    <div class="fb">แคโทด: Na⁺ + e⁻ → Na(l)
-                        แอโนด: 2Cl⁻ → Cl₂(g) + 2e⁻</div>
-                    <h3>กฎฟาราเดย์</h3>
-                    <div class="fb">m = (M × I × t) / (n × F)
-                        ตัวอย่าง: ชุบ Cu ด้วยกระแส 2A เป็นเวลา 30 นาที (M=63.5, n=2)
-                        m = (63.5 × 2 × 1800) / (2 × 96485) = 1.18 g</div>
-                </div>
+    <div class="mov" id="m7">
+        <div class="mbox"><button class="mcl" onclick="closeM('m7')">✕</button>
+            <div class="mnum">บทเรียนที่ 7</div>
+            <h2 class="mtit">การแยกสารละลายด้วยไฟฟ้า (Electrolysis)</h2>
+            <div class="mc">
+                <p><strong>อิเล็กโทรลิซิส</strong> คือกระบวนการใช้กระแสไฟฟ้าทำให้สารเกิดการสลายตัว</p>
+                <h3>การแยกน้ำ (Water Electrolysis)</h3>
+                <div class="fb">แคโทด (รีดักชัน): 2H₂O + 2e⁻ → H₂(g) + 2OH⁻(aq)
+                    แอโนด (ออกซิเดชัน): 2H₂O → O₂(g) + 4H⁺(aq) + 4e⁻
+                    ──────────────────────────────────────────
+                    สมการรวม: 2H₂O → 2H₂(g) + O₂(g)</div>
+                <h3>การแยกสารละลาย NaCl</h3>
+                <div class="fb">แคโทด: 2H₂O + 2e⁻ → H₂(g) + 2OH⁻ → ได้ H₂
+                    แอโนด: 2Cl⁻ → Cl₂(g) + 2e⁻ → ได้ Cl₂
+                    สารละลาย: Na⁺ + OH⁻ → NaOH
+                    ผลิตภัณฑ์: H₂, Cl₂, NaOH</div>
+                <h3>การแยก NaCl หลอมเหลว</h3>
+                <div class="fb">แคโทด: Na⁺ + e⁻ → Na(l)
+                    แอโนด: 2Cl⁻ → Cl₂(g) + 2e⁻</div>
+                <h3>กฎฟาราเดย์</h3>
+                <div class="fb">m = (M × I × t) / (n × F)
+                    ตัวอย่าง: ชุบ Cu ด้วยกระแส 2A เป็นเวลา 30 นาที (M=63.5, n=2)
+                    m = (63.5 × 2 × 1800) / (2 × 96485) = 1.18 g</div>
             </div>
         </div>
+    </div>
 
-        <div class="mov" id="m8">
-            <div class="mbox"><button class="mcl" onclick="closeM('m8')">✕</button>
-                <div class="mnum">บทเรียนที่ 8</div>
-                <h2 class="mtit">เซลล์กัลวานิก (ทบทวน)</h2>
-                <div class="mc">
-                    <h3>สรุปหลักสำคัญเซลล์กัลวานิก</h3>
-                    <ul>
-                        <li><strong>แอโนด (−):</strong> ออกซิเดชัน, โลหะละลาย (มวลลด), ไอออนบวกเพิ่ม</li>
-                        <li><strong>แคโทด (+):</strong> รีดักชัน, โลหะตกตะกอน (มวลเพิ่ม), ไอออนบวกลด</li>
-                        <li><strong>e⁻ ไหล:</strong> แอโนด → แคโทด (ผ่านสายไฟ)</li>
-                        <li><strong>ไอออนไหล:</strong> ผ่านสะพานเกลือ (K⁺ → แคโทด, Cl⁻ → แอโนด)</li>
-                    </ul>
-                    <h3>ความสัมพันธ์สำคัญ</h3>
-                    <div class="fb">E°cell = E°cathode − E°anode
+    <div class="mov" id="m8">
+        <div class="mbox"><button class="mcl" onclick="closeM('m8')">✕</button>
+            <div class="mnum">บทเรียนที่ 8</div>
+            <h2 class="mtit">เซลล์กัลวานิก (ทบทวน)</h2>
+            <div class="mc">
+                <h3>สรุปหลักสำคัญเซลล์กัลวานิก</h3>
+                <ul>
+                    <li><strong>แอโนด (−):</strong> ออกซิเดชัน, โลหะละลาย (มวลลด), ไอออนบวกเพิ่ม</li>
+                    <li><strong>แคโทด (+):</strong> รีดักชัน, โลหะตกตะกอน (มวลเพิ่ม), ไอออนบวกลด</li>
+                    <li><strong>e⁻ ไหล:</strong> แอโนด → แคโทด (ผ่านสายไฟ)</li>
+                    <li><strong>ไอออนไหล:</strong> ผ่านสะพานเกลือ (K⁺ → แคโทด, Cl⁻ → แอโนด)</li>
+                </ul>
+                <h3>ความสัมพันธ์สำคัญ</h3>
+                <div class="fb">E°cell = E°cathode − E°anode
 
-                        E°cell > 0 → ΔG° < 0 → K> 1 (เกิดเองได้)
-                            E°cell < 0 → ΔG°> 0 → K < 1 (ไม่เกิดเอง) E°cell=0 → ΔG°=0 → K=1 (สมดุล) ΔG°=−nFE°cell log
-                                    K=nE°cell / 0.0592 (ที่ 25°C)</div>
-                                    <h3>การเลือกแอโนด-แคโทด</h3>
-                                    <p>โลหะที่มี <strong>E° ต่ำกว่า</strong> (ค่าลบมากกว่า) จะเป็น
-                                        <strong>แอโนด</strong> (ออกซิไดส์ง่ายกว่า) โลหะที่มี E° สูงกว่าจะเป็น
-                                        <strong>แคโทด</strong>
-                                    </p>
-                    </div>
-                </div>
+                    E°cell > 0 → ΔG° &lt; 0 → K > 1 (เกิดเองได้)
+                    E°cell &lt; 0 → ΔG° > 0 → K &lt; 1 (ไม่เกิดเอง)
+                    E°cell = 0 → ΔG° = 0 → K = 1 (สมดุล)
+                    ΔG° = −nFE°cell
+                    log K = nE°cell / 0.0592 (ที่ 25°C)</div>
+                <h3>การเลือกแอโนด-แคโทด</h3>
+                <p>โลหะที่มี <strong>E° ต่ำกว่า</strong> (ค่าลบมากกว่า) จะเป็น <strong>แอโนด</strong>
+                    (ออกซิไดส์ง่ายกว่า) โลหะที่มี E° สูงกว่าจะเป็น <strong>แคโทด</strong></p>
             </div>
+        </div>
+    </div>
 
-            <div class="mov" id="m9">
-                <div class="mbox"><button class="mcl" onclick="closeM('m9')">✕</button>
-                    <div class="mnum">บทเรียนที่ 9</div>
-                    <h2 class="mtit">ศักย์ไฟฟ้าครึ่งเซลล์มาตรฐาน (Standard Electrode Potential, E°)</h2>
-                    <div class="mc">
-                        <p>ค่า <strong>E°</strong> วัดโดยเทียบกับขั้วไฮโดรเจนมาตรฐาน (SHE) ซึ่งกำหนดให้ E° = 0.000 V ที่
-                            25°C, ความดัน 1 atm, ความเข้มข้น 1 M</p>
-                        <div class="fb">ขั้วไฮโดรเจนมาตรฐาน (SHE):
-                            2H⁺(aq, 1M) + 2e⁻ ⇌ H₂(g, 1atm) E° = 0.000 V</div>
-                        <h3>ตารางค่า E° (ปฏิกิริยารีดักชัน) ที่สำคัญ</h3>
-                        <div class="fb">F₂(g) + 2e⁻ → 2F⁻(aq) E° = +2.87 V (ตัวออกซิไดส์แรงที่สุด)
-                            Au³⁺ + 3e⁻ → Au(s) E° = +1.50 V
-                            Cl₂(g) + 2e⁻ → 2Cl⁻(aq) E° = +1.36 V
-                            O₂ + 4H⁺ + 4e⁻ → 2H₂O E° = +1.23 V
-                            Ag⁺ + e⁻ → Ag(s) E° = +0.80 V
-                            Fe³⁺ + e⁻ → Fe²⁺ E° = +0.77 V
-                            Cu²⁺ + 2e⁻ → Cu(s) E° = +0.34 V
-                            2H⁺ + 2e⁻ → H₂(g) E° = 0.00 V (SHE มาตรฐาน)
-                            Fe²⁺ + 2e⁻ → Fe(s) E° = −0.44 V
-                            Zn²⁺ + 2e⁻ → Zn(s) E° = −0.76 V
-                            Al³⁺ + 3e⁻ → Al(s) E° = −1.66 V
-                            Mg²⁺ + 2e⁻ → Mg(s) E° = −2.37 V
-                            Na⁺ + e⁻ → Na(s) E° = −2.71 V
-                            Li⁺ + e⁻ → Li(s) E° = −3.05 V (ตัวรีดิวซ์แรงที่สุด)</div>
-                        <p>ค่า E° สูง → รีดิวซ์ได้ง่าย (ตัวออกซิไดส์แรง) | ค่า E° ต่ำ → ออกซิไดส์ได้ง่าย (ตัวรีดิวซ์แรง)
-                        </p>
-                    </div>
-                </div>
+    <div class="mov" id="m9">
+        <div class="mbox"><button class="mcl" onclick="closeM('m9')">✕</button>
+            <div class="mnum">บทเรียนที่ 9</div>
+            <h2 class="mtit">ศักย์ไฟฟ้าครึ่งเซลล์มาตรฐาน (Standard Electrode Potential, E°)</h2>
+            <div class="mc">
+                <p>ค่า <strong>E°</strong> วัดโดยเทียบกับขั้วไฮโดรเจนมาตรฐาน (SHE) ซึ่งกำหนดให้ E° = 0.000 V ที่ 25°C,
+                    ความดัน 1 atm, ความเข้มข้น 1 M</p>
+                <div class="fb">ขั้วไฮโดรเจนมาตรฐาน (SHE):
+                    2H⁺(aq, 1M) + 2e⁻ ⇌ H₂(g, 1atm) E° = 0.000 V</div>
+                <h3>ตารางค่า E° (ปฏิกิริยารีดักชัน) ที่สำคัญ</h3>
+                <div class="fb">F₂(g) + 2e⁻ → 2F⁻(aq) E° = +2.87 V (ตัวออกซิไดส์แรงที่สุด)
+                    Au³⁺ + 3e⁻ → Au(s) E° = +1.50 V
+                    Cl₂(g) + 2e⁻ → 2Cl⁻(aq) E° = +1.36 V
+                    O₂ + 4H⁺ + 4e⁻ → 2H₂O E° = +1.23 V
+                    Ag⁺ + e⁻ → Ag(s) E° = +0.80 V
+                    Fe³⁺ + e⁻ → Fe²⁺ E° = +0.77 V
+                    Cu²⁺ + 2e⁻ → Cu(s) E° = +0.34 V
+                    2H⁺ + 2e⁻ → H₂(g) E° = 0.00 V (SHE มาตรฐาน)
+                    Fe²⁺ + 2e⁻ → Fe(s) E° = −0.44 V
+                    Zn²⁺ + 2e⁻ → Zn(s) E° = −0.76 V
+                    Al³⁺ + 3e⁻ → Al(s) E° = −1.66 V
+                    Mg²⁺ + 2e⁻ → Mg(s) E° = −2.37 V
+                    Na⁺ + e⁻ → Na(s) E° = −2.71 V
+                    Li⁺ + e⁻ → Li(s) E° = −3.05 V (ตัวรีดิวซ์แรงที่สุด)</div>
+                <p>ค่า E° สูง → รีดิวซ์ได้ง่าย (ตัวออกซิไดส์แรง) | ค่า E° ต่ำ → ออกซิไดส์ได้ง่าย (ตัวรีดิวซ์แรง)</p>
             </div>
+        </div>
+    </div>
 
-            <div class="mov" id="m10">
-                <div class="mbox"><button class="mcl" onclick="closeM('m10')">✕</button>
-                    <div class="mnum">บทเรียนที่ 10</div>
-                    <h2 class="mtit">ประโยชน์ของค่า E° (Applications of Standard Electrode Potential)</h2>
-                    <div class="mc">
-                        <h3>1. ทำนายทิศทางปฏิกิริยา</h3>
-                        <div class="fb">E°cell = E°(ขั้วที่ E° สูงกว่า) − E°(ขั้วที่ E° ต่ำกว่า)
-                            ถ้า E°cell > 0 → ปฏิกิริยาเกิดเอง (spontaneous)
-                            ถ้า E°cell < 0 → ปฏิกิริยาไม่เกิดเอง</div>
-                                <h3>2. เปรียบเทียบความแรงตัวออกซิไดส์/ตัวรีดิวซ์</h3>
-                                <ul>
-                                    <li>E° สูงกว่า → เป็นตัวออกซิไดส์ที่แรงกว่า</li>
-                                    <li>E° ต่ำกว่า → เป็นตัวรีดิวซ์ที่แรงกว่า</li>
-                                </ul>
-                                <h3>3. หาค่าคงที่สมดุล Keq</h3>
-                                <div class="fb">log Keq = nE°cell / 0.0592 (ที่ 25°C)
-                                    หรือ ΔG° = −nFE° = −RT ln Keq</div>
-                                <h3>4. สมการเนิร์นสต์ (ไม่ใช่สภาวะมาตรฐาน)</h3>
-                                <div class="fb">E = E° − (0.0592 / n) × log Q (ที่ 25°C)
-                                    โดย Q = reaction quotient = [ผลิตภัณฑ์] / [สารตั้งต้น]</div>
-                                <h3>ตัวอย่าง</h3>
-                                <div class="fb">เซลล์ Zn-Cu:
-                                    E°cell = E°(Cu²⁺/Cu) − E°(Zn²⁺/Zn) = 0.34 − (−0.76) = +1.10 V
-                                    log K = (2 × 1.10) / 0.0592 = 37.2
-                                    K = 10^37.2 → ปฏิกิริยาเกิดเองได้มาก</div>
-                        </div>
-                    </div>
-                </div>
+    <div class="mov" id="m10">
+        <div class="mbox"><button class="mcl" onclick="closeM('m10')">✕</button>
+            <div class="mnum">บทเรียนที่ 10</div>
+            <h2 class="mtit">ประโยชน์ของค่า E° (Applications of Standard Electrode Potential)</h2>
+            <div class="mc">
+                <h3>1. ทำนายทิศทางปฏิกิริยา</h3>
+                <div class="fb">E°cell = E°(ขั้วที่ E° สูงกว่า) − E°(ขั้วที่ E° ต่ำกว่า)
+                    ถ้า E°cell > 0 → ปฏิกิริยาเกิดเอง (spontaneous)
+                    ถ้า E°cell &lt; 0 → ปฏิกิริยาไม่เกิดเอง</div>
+                <h3>2. เปรียบเทียบความแรงตัวออกซิไดส์/ตัวรีดิวซ์</h3>
+                <ul>
+                    <li>E° สูงกว่า → เป็นตัวออกซิไดส์ที่แรงกว่า</li>
+                    <li>E° ต่ำกว่า → เป็นตัวรีดิวซ์ที่แรงกว่า</li>
+                </ul>
+                <h3>3. หาค่าคงที่สมดุล Keq</h3>
+                <div class="fb">log Keq = nE°cell / 0.0592 (ที่ 25°C)
+                    หรือ ΔG° = −nFE° = −RT ln Keq</div>
+                <h3>4. สมการเนิร์นสต์ (ไม่ใช่สภาวะมาตรฐาน)</h3>
+                <div class="fb">E = E° − (0.0592 / n) × log Q (ที่ 25°C)
+                    โดย Q = reaction quotient = [ผลิตภัณฑ์] / [สารตั้งต้น]</div>
+                <h3>ตัวอย่าง</h3>
+                <div class="fb">เซลล์ Zn-Cu:
+                    E°cell = E°(Cu²⁺/Cu) − E°(Zn²⁺/Zn) = 0.34 − (−0.76) = +1.10 V
+                    log K = (2 × 1.10) / 0.0592 = 37.2
+                    K = 10^37.2 → ปฏิกิริยาเกิดเองได้มาก</div>
+            </div>
+        </div>
+    </div>
 
-                <div class="mov" id="m11">
-                    <div class="mbox"><button class="mcl" onclick="closeM('m11')">✕</button>
-                        <div class="mnum">บทเรียนที่ 11</div>
-                        <h2 class="mtit">เซลล์ปฐมภูมิ (Primary Cell)</h2>
-                        <div class="mc">
-                            <p>เซลล์ปฐมภูมิคือเซลล์กัลวานิกที่ใช้แล้วทิ้ง ชาร์จใหม่ไม่ได้</p>
-                            <h3>เซลล์แห้ง (Leclanché Cell / Dry Cell)</h3>
-                            <div class="fb">แอโนด: Zn(s) → Zn²⁺ + 2e⁻
-                                แคโทด: 2MnO₂ + 2NH₄⁺ + 2e⁻ → Mn₂O₃ + 2NH₃ + H₂O
-                                แรงดัน: ~1.5 V | อิเล็กโทรไลต์: NH₄Cl + ZnCl₂</div>
-                            <h3>ถ่านอัลคาไลน์ (Alkaline Battery)</h3>
-                            <div class="fb">แอโนด: Zn(s) + 2OH⁻ → ZnO + H₂O + 2e⁻
-                                แคโทด: 2MnO₂ + H₂O + 2e⁻ → Mn₂O₃ + 2OH⁻
-                                แรงดัน: ~1.5 V | อิเล็กโทรไลต์: KOH (ด่าง) | จ่ายกระแสได้นานกว่าถ่านธรรมดา</div>
-                            <h3>เซลล์ปรอท (Mercury Cell)</h3>
-                            <div class="fb">แอโนด: Zn + 2OH⁻ → ZnO + H₂O + 2e⁻
-                                แคโทด: HgO + H₂O + 2e⁻ → Hg(l) + 2OH⁻
-                                แรงดัน: ~1.35 V (คงที่มาก) | ใช้ในนาฬิกา เครื่องช่วยฟัง</div>
-                            <h3>เซลล์เชื้อเพลิง H₂-O₂ (Fuel Cell)</h3>
-                            <div class="fb">แอโนด: H₂(g) + 2OH⁻ → 2H₂O + 2e⁻
-                                แคโทด: O₂(g) + 2H₂O + 4e⁻ → 4OH⁻
-                                สมการรวม: 2H₂ + O₂ → 2H₂O
-                                แรงดัน: ~1.23 V | ประสิทธิภาพสูง ไม่มีมลพิษ ใช้ในยานอวกาศ</div>
-                        </div>
-                    </div>
-                </div>
+    <div class="mov" id="m11">
+        <div class="mbox"><button class="mcl" onclick="closeM('m11')">✕</button>
+            <div class="mnum">บทเรียนที่ 11</div>
+            <h2 class="mtit">เซลล์ปฐมภูมิ (Primary Cell)</h2>
+            <div class="mc">
+                <p>เซลล์ปฐมภูมิคือเซลล์กัลวานิกที่ใช้แล้วทิ้ง ชาร์จใหม่ไม่ได้</p>
+                <h3>เซลล์แห้ง (Leclanché Cell / Dry Cell)</h3>
+                <div class="fb">แอโนด: Zn(s) → Zn²⁺ + 2e⁻
+                    แคโทด: 2MnO₂ + 2NH₄⁺ + 2e⁻ → Mn₂O₃ + 2NH₃ + H₂O
+                    แรงดัน: ~1.5 V | อิเล็กโทรไลต์: NH₄Cl + ZnCl₂</div>
+                <h3>ถ่านอัลคาไลน์ (Alkaline Battery)</h3>
+                <div class="fb">แอโนด: Zn(s) + 2OH⁻ → ZnO + H₂O + 2e⁻
+                    แคโทด: 2MnO₂ + H₂O + 2e⁻ → Mn₂O₃ + 2OH⁻
+                    แรงดัน: ~1.5 V | อิเล็กโทรไลต์: KOH (ด่าง) | จ่ายกระแสได้นานกว่าถ่านธรรมดา</div>
+                <h3>เซลล์ปรอท (Mercury Cell)</h3>
+                <div class="fb">แอโนด: Zn + 2OH⁻ → ZnO + H₂O + 2e⁻
+                    แคโทด: HgO + H₂O + 2e⁻ → Hg(l) + 2OH⁻
+                    แรงดัน: ~1.35 V (คงที่มาก) | ใช้ในนาฬิกา เครื่องช่วยฟัง</div>
+                <h3>เซลล์เชื้อเพลิง H₂-O₂ (Fuel Cell)</h3>
+                <div class="fb">แอโนด: H₂(g) + 2OH⁻ → 2H₂O + 2e⁻
+                    แคโทด: O₂(g) + 2H₂O + 4e⁻ → 4OH⁻
+                    สมการรวม: 2H₂ + O₂ → 2H₂O
+                    แรงดัน: ~1.23 V | ประสิทธิภาพสูง ไม่มีมลพิษ ใช้ในยานอวกาศ</div>
+            </div>
+        </div>
+    </div>
 
-                <div class="mov" id="m12">
-                    <div class="mbox"><button class="mcl" onclick="closeM('m12')">✕</button>
-                        <div class="mnum">บทเรียนที่ 12</div>
-                        <h2 class="mtit">การผุกร่อนของโลหะและการป้องกัน (Corrosion & Prevention)</h2>
-                        <div class="mc">
-                            <p><strong>การผุกร่อน (Corrosion)</strong> คือกระบวนการที่โลหะถูกออกซิไดส์โดยสิ่งแวดล้อม
-                                ทำให้เกิดสนิมหรือโลหะออกไซด์</p>
-                            <h3>กลไกการเกิดสนิมเหล็ก</h3>
-                            <p>เหล็กทำหน้าที่เป็นทั้งแอโนดและแคโทดในบริเวณต่างกัน (electrochemical corrosion)</p>
-                            <div class="fb">แอโนด (บริเวณรอยแตก): Fe(s) → Fe²⁺(aq) + 2e⁻
-                                แคโทด (บริเวณน้ำ/O₂): O₂(g) + 2H₂O + 4e⁻ → 4OH⁻(aq)
-                                ──────────────────────────────────────────
-                                Fe²⁺ + 2OH⁻ → Fe(OH)₂ → Fe₂O₃·nH₂O (สนิมแดง)</div>
-                            <h3>ปัจจัยที่เร่งการผุกร่อน</h3>
-                            <ul>
-                                <li>ความชื้น/น้ำ — เป็นตัวนำไฟฟ้า</li>
-                                <li>O₂ — ตัวออกซิไดส์</li>
-                                <li>กรด (H⁺) — เร่งปฏิกิริยา</li>
-                                <li>เกลือ (Cl⁻, SO₄²⁻) — เพิ่มการนำไฟฟ้า</li>
-                                <li>โลหะต่างชนิดสัมผัสกัน — เกิด galvanic corrosion</li>
-                            </ul>
-                            <h3>วิธีป้องกันการผุกร่อน</h3>
-                            <ul>
-                                <li><strong>เคลือบผิว</strong> — สี, พลาสติก, ยาง</li>
-                                <li><strong>Galvanization</strong> — ชุบสังกะสี (Zn ออกซิไดส์แทน Fe เพราะ E°Zn &lt;
-                                    E°Fe)</li>
-                                <li><strong>Tinning</strong> — ชุบดีบุก (ป้องกันทางกายภาพ)</li>
-                                <li><strong>Cathodic Protection</strong> — ต่อ Zn หรือ Mg กับโลหะที่ต้องการ (sacrificial
-                                    anode)</li>
-                                <li><strong>Impressed Current</strong> — ใช้กระแสไฟฟ้าภายนอกทำให้เป็นแคโทด</li>
-                                <li><strong>โลหะผสม</strong> — สแตนเลส (Fe + Cr + Ni) ทนสนิม</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <div class="mov" id="m12">
+        <div class="mbox"><button class="mcl" onclick="closeM('m12')">✕</button>
+            <div class="mnum">บทเรียนที่ 12</div>
+            <h2 class="mtit">การผุกร่อนของโลหะและการป้องกัน (Corrosion & Prevention)</h2>
+            <div class="mc">
+                <p><strong>การผุกร่อน (Corrosion)</strong> คือกระบวนการที่โลหะถูกออกซิไดส์โดยสิ่งแวดล้อม
+                    ทำให้เกิดสนิมหรือโลหะออกไซด์</p>
+                <h3>กลไกการเกิดสนิมเหล็ก</h3>
+                <p>เหล็กทำหน้าที่เป็นทั้งแอโนดและแคโทดในบริเวณต่างกัน (electrochemical corrosion)</p>
+                <div class="fb">แอโนด (บริเวณรอยแตก): Fe(s) → Fe²⁺(aq) + 2e⁻
+                    แคโทด (บริเวณน้ำ/O₂): O₂(g) + 2H₂O + 4e⁻ → 4OH⁻(aq)
+                    ──────────────────────────────────────────
+                    Fe²⁺ + 2OH⁻ → Fe(OH)₂ → Fe₂O₃·nH₂O (สนิมแดง)</div>
+                <h3>ปัจจัยที่เร่งการผุกร่อน</h3>
+                <ul>
+                    <li>ความชื้น/น้ำ — เป็นตัวนำไฟฟ้า</li>
+                    <li>O₂ — ตัวออกซิไดส์</li>
+                    <li>กรด (H⁺) — เร่งปฏิกิริยา</li>
+                    <li>เกลือ (Cl⁻, SO₄²⁻) — เพิ่มการนำไฟฟ้า</li>
+                    <li>โลหะต่างชนิดสัมผัสกัน — เกิด galvanic corrosion</li>
+                </ul>
+                <h3>วิธีป้องกันการผุกร่อน</h3>
+                <ul>
+                    <li><strong>เคลือบผิว</strong> — สี, พลาสติก, ยาง</li>
+                    <li><strong>Galvanization</strong> — ชุบสังกะสี (Zn ออกซิไดส์แทน Fe เพราะ E°Zn &lt; E°Fe)</li>
+                    <li><strong>Tinning</strong> — ชุบดีบุก (ป้องกันทางกายภาพ)</li>
+                    <li><strong>Cathodic Protection</strong> — ต่อ Zn หรือ Mg กับโลหะที่ต้องการ (sacrificial anode)</li>
+                    <li><strong>Impressed Current</strong> — ใช้กระแสไฟฟ้าภายนอกทำให้เป็นแคโทด</li>
+                    <li><strong>โลหะผสม</strong> — สแตนเลส (Fe + Cr + Ni) ทนสนิม</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-                <!-- CANVAS + JS -->
-                <script>
-                    // MODAL
-                    function openM(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden' }
-                    function closeM(id) { document.getElementById(id).classList.remove('active'); document.body.style.overflow = '' }
-                    document.querySelectorAll('.mov').forEach(o => o.addEventListener('click', function (e) { if (e.target === this) { this.classList.remove('active'); document.body.style.overflow = '' } }))
+    <script>
+        function openM(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden' }
+        function closeM(id) { document.getElementById(id).classList.remove('active'); document.body.style.overflow = '' }
+        document.querySelectorAll('.mov').forEach(o => o.addEventListener('click', function (e) { if (e.target === this) { this.classList.remove('active'); document.body.style.overflow = '' } }));
 
-                        // CANVAS BACKGROUND
-                        ; (function () {
-                            const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
-                            let W, H;
-                            function resize() { W = cv.width = window.innerWidth; H = cv.height = window.innerHeight }
-                            resize(); window.addEventListener('resize', resize);
+        (function () {
+            const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+            let W, H;
+            function resize() { W = cv.width = window.innerWidth; H = cv.height = window.innerHeight }
+            resize(); window.addEventListener('resize', resize);
 
-                            // ---- STARS ----
-                            const stars = [];
-                            for (let i = 0; i < 400; i++) {
-                                const r = Math.random();
-                                stars.push({
-                                    x: Math.random() * 1e4, y: Math.random() * 1e4,
-                                    baseX: Math.random() * 100, baseY: Math.random() * 100,
-                                    sx: Math.random() * W, sy: Math.random() * H,
-                                    r: Math.random() * 1.6 + .15, op: Math.random() * .8 + .1,
-                                    speed: Math.random() * .2 + .03,
-                                    phase: Math.random() * Math.PI * 2, tw: Math.random() * .02 + .005,
-                                    col: r < .55 ? '200,225,255' : r < .8 ? '140,210,255' : '205,165,255'
-                                })
-                            }
+            const stars = [];
+            for (let i = 0; i < 400; i++) {
+                const r = Math.random();
+                stars.push({ sx: Math.random() * window.innerWidth, sy: Math.random() * window.innerHeight, r: Math.random() * 1.6 + .15, op: Math.random() * .8 + .1, speed: Math.random() * .2 + .03, phase: Math.random() * Math.PI * 2, tw: Math.random() * .02 + .005, col: r < .55 ? '200,225,255' : r < .8 ? '140,210,255' : '205,165,255' });
+            }
 
-                            // ---- FLOATING ATOMS ----
-                            class Atom {
-                                constructor() { this.reset(true) }
-                                reset(init) {
-                                    this.x = Math.random() * W; this.y = init ? Math.random() * H : H + 80;
-                                    this.sz = Math.random() * 60 + 18;
-                                    this.vy = -(Math.random() * .3 + .06);
-                                    this.vx = (Math.random() - .5) * .15;
-                                    this.rot = Math.random() * Math.PI * 2;
-                                    this.rv = (Math.random() - .5) * .007;
-                                    this.op = Math.random() * .11 + .03;
-                                    this.a1 = Math.random() * Math.PI * 2; this.s1 = (Math.random() * .014 + .007) * (Math.random() < .5 ? 1 : -1);
-                                    this.a2 = Math.random() * Math.PI * 2; this.s2 = (Math.random() * .011 + .005) * (Math.random() < .5 ? 1 : -1);
-                                    this.a3 = Math.random() * Math.PI * 2; this.s3 = (Math.random() * .009 + .004) * (Math.random() < .5 ? 1 : -1);
-                                    const c = Math.random();
-                                    this.cr = c < .4 ? 0 : c < .7 ? 0 : 80; this.cg = c < .4 ? 200 : c < .7 ? 120 : 0; this.cb = c < .4 ? 255 : c < .7 ? 255 : 255;
-                                }
-                                draw() {
-                                    ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.rot); ctx.globalAlpha = this.op;
-                                    const s = this.sz, c = `${this.cr},${this.cg},${this.cb}`;
-                                    // nucleus
-                                    ctx.beginPath(); ctx.arc(0, 0, s * .17, 0, Math.PI * 2);
-                                    ctx.strokeStyle = `rgba(${c},0.9)`; ctx.lineWidth = 1.2; ctx.stroke();
-                                    ctx.fillStyle = `rgba(${c},0.12)`; ctx.fill();
-                                    // 3 orbits + electrons
-                                    [[this.a1, 0, s, s * .38], [this.a2, Math.PI / 3, s, s * .38], [this.a3, -Math.PI / 3, s, s * .38]].forEach(([a, tilt, rx, ry]) => {
-                                        ctx.save(); ctx.rotate(tilt);
-                                        ctx.beginPath(); ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
-                                        ctx.strokeStyle = `rgba(${c},0.35)`; ctx.lineWidth = .8; ctx.stroke();
-                                        const ex = Math.cos(a) * rx, ey = Math.sin(a) * ry;
-                                        ctx.beginPath(); ctx.arc(ex, ey, s * .075, 0, Math.PI * 2);
-                                        ctx.fillStyle = `rgba(${c},0.95)`;
-                                        ctx.shadowColor = `rgba(${c},1)`; ctx.shadowBlur = 10; ctx.fill();
-                                        ctx.restore();
-                                    }); ctx.restore();
-                                    this.a1 += this.s1; this.a2 += this.s2; this.a3 += this.s3;
-                                    this.x += this.vx; this.y += this.vy; this.rot += this.rv;
-                                    if (this.y < -120) this.reset(false);
-                                }
-                            }
-                            const atoms = []; for (let i = 0; i < 28; i++)atoms.push(new Atom());
+            class Atom {
+                constructor() { this.reset(true) }
+                reset(init) {
+                    this.x = Math.random() * W; this.y = init ? Math.random() * H : H + 80;
+                    this.sz = Math.random() * 60 + 18; this.vy = -(Math.random() * .3 + .06); this.vx = (Math.random() - .5) * .15;
+                    this.rot = Math.random() * Math.PI * 2; this.rv = (Math.random() - .5) * .007;
+                    this.op = Math.random() * .11 + .03;
+                    this.a1 = Math.random() * Math.PI * 2; this.s1 = (Math.random() * .014 + .007) * (Math.random() < .5 ? 1 : -1);
+                    this.a2 = Math.random() * Math.PI * 2; this.s2 = (Math.random() * .011 + .005) * (Math.random() < .5 ? 1 : -1);
+                    this.a3 = Math.random() * Math.PI * 2; this.s3 = (Math.random() * .009 + .004) * (Math.random() < .5 ? 1 : -1);
+                    const c = Math.random(); this.cr = c < .4 ? 0 : c < .7 ? 0 : 80; this.cg = c < .4 ? 200 : c < .7 ? 120 : 0; this.cb = 255;
+                }
+                draw() {
+                    ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.rot); ctx.globalAlpha = this.op;
+                    const s = this.sz, c = `${this.cr},${this.cg},${this.cb}`;
+                    ctx.beginPath(); ctx.arc(0, 0, s * .17, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(${c},0.9)`; ctx.lineWidth = 1.2; ctx.stroke();
+                    ctx.fillStyle = `rgba(${c},0.12)`; ctx.fill();
+                    [[this.a1, 0, s, s * .38], [this.a2, Math.PI / 3, s, s * .38], [this.a3, -Math.PI / 3, s, s * .38]].forEach(([a, tilt, rx, ry]) => {
+                        ctx.save(); ctx.rotate(tilt);
+                        ctx.beginPath(); ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+                        ctx.strokeStyle = `rgba(${c},0.35)`; ctx.lineWidth = .8; ctx.stroke();
+                        const ex = Math.cos(a) * rx, ey = Math.sin(a) * ry;
+                        ctx.beginPath(); ctx.arc(ex, ey, s * .075, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(${c},0.95)`; ctx.shadowColor = `rgba(${c},1)`; ctx.shadowBlur = 10; ctx.fill();
+                        ctx.restore();
+                    }); ctx.restore();
+                    this.a1 += this.s1; this.a2 += this.s2; this.a3 += this.s3;
+                    this.x += this.vx; this.y += this.vy; this.rot += this.rv;
+                    if (this.y < -120) this.reset(false);
+                }
+            }
+            const atoms = []; for (let i = 0; i < 28; i++) atoms.push(new Atom());
 
-                            // ---- DNA HELIX ----
-                            class DNA {
-                                constructor() {
-                                    this.x = Math.random() * W; this.y = H + 150;
-                                    this.t = Math.random() * 100;
-                                    this.sc = .65 + Math.random() * .55;
-                                    this.sp = .013 + Math.random() * .008;
-                                    this.op = .04 + Math.random() * .055;
-                                    this.vx = (Math.random() - .5) * .1;
-                                }
-                                draw() {
-                                    ctx.save(); ctx.globalAlpha = this.op;
-                                    const steps = 44; const len = 130 * this.sc;
-                                    for (let i = 0; i <= steps; i++) {
-                                        const t2 = (this.t + i) * .14;
-                                        const y = this.y - i * (len / steps);
-                                        if (y < -20 || y > H + 20) continue;
-                                        const x1 = this.x + Math.cos(t2) * this.sc * 22;
-                                        const x2 = this.x - Math.cos(t2) * this.sc * 22;
-                                        if (i > 0) {
-                                            const tp = (this.t + i - 1) * .14, py = this.y - (i - 1) * (len / steps);
-                                            ctx.beginPath(); ctx.moveTo(this.x + Math.cos(tp) * this.sc * 22, py); ctx.lineTo(x1, y);
-                                            ctx.strokeStyle = 'rgba(0,210,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
-                                            ctx.beginPath(); ctx.moveTo(this.x - Math.cos(tp) * this.sc * 22, py); ctx.lineTo(x2, y);
-                                            ctx.strokeStyle = 'rgba(160,0,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
-                                        }
-                                        if (i % 4 === 0) {
-                                            ctx.beginPath(); ctx.moveTo(x1, y); ctx.lineTo(x2, y);
-                                            ctx.strokeStyle = 'rgba(0,255,210,0.28)'; ctx.lineWidth = .9; ctx.stroke();
-                                            [[x1, 'rgba(0,220,255,0.8)'], [x2, 'rgba(180,0,255,0.8)']].forEach(([px, col]) => {
-                                                ctx.beginPath(); ctx.arc(px, y, 2.2, 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill();
-                                            });
-                                        }
-                                    }
-                                    ctx.restore();
-                                    this.t += this.sp; this.y -= .07; this.x += this.vx;
-                                    if (this.y < -200) { this.y = H + 200; this.x = Math.random() * W; }
-                                }
-                            }
-                            const dnas = []; for (let i = 0; i < 5; i++)dnas.push(new DNA());
+            class DNA {
+                constructor() { this.x = Math.random() * window.innerWidth; this.y = window.innerHeight + 150; this.t = Math.random() * 100; this.sc = .65 + Math.random() * .55; this.sp = .013 + Math.random() * .008; this.op = .04 + Math.random() * .055; this.vx = (Math.random() - .5) * .1; }
+                draw() {
+                    ctx.save(); ctx.globalAlpha = this.op;
+                    const steps = 44; const len = 130 * this.sc;
+                    for (let i = 0; i <= steps; i++) {
+                        const t2 = (this.t + i) * .14; const y = this.y - i * (len / steps);
+                        if (y < -20 || y > H + 20) continue;
+                        const x1 = this.x + Math.cos(t2) * this.sc * 22; const x2 = this.x - Math.cos(t2) * this.sc * 22;
+                        if (i > 0) {
+                            const tp = (this.t + i - 1) * .14, py = this.y - (i - 1) * (len / steps);
+                            ctx.beginPath(); ctx.moveTo(this.x + Math.cos(tp) * this.sc * 22, py); ctx.lineTo(x1, y); ctx.strokeStyle = 'rgba(0,210,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+                            ctx.beginPath(); ctx.moveTo(this.x - Math.cos(tp) * this.sc * 22, py); ctx.lineTo(x2, y); ctx.strokeStyle = 'rgba(160,0,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+                        }
+                        if (i % 4 === 0) {
+                            ctx.beginPath(); ctx.moveTo(x1, y); ctx.lineTo(x2, y); ctx.strokeStyle = 'rgba(0,255,210,0.28)'; ctx.lineWidth = .9; ctx.stroke();
+                            [[x1, 'rgba(0,220,255,0.8)'], [x2, 'rgba(180,0,255,0.8)']].forEach(([px, col]) => { ctx.beginPath(); ctx.arc(px, y, 2.2, 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill(); });
+                        }
+                    }
+                    ctx.restore();
+                    this.t += this.sp; this.y -= .07; this.x += this.vx;
+                    if (this.y < -200) { this.y = H + 200; this.x = Math.random() * W; }
+                }
+            }
+            const dnas = []; for (let i = 0; i < 5; i++) dnas.push(new DNA());
 
-                            // ---- SHOOTING STARS ----
-                            class Shoot {
-                                constructor() { this.reset() }
-                                reset() {
-                                    this.x = Math.random() * W * .5; this.y = Math.random() * H * .35;
-                                    this.len = 90 + Math.random() * 100; this.spd = 7 + Math.random() * 5;
-                                    this.ang = 28 + Math.random() * 22; this.op = 0; this.maxOp = .55 + Math.random() * .35;
-                                    this.active = false; this.timer = Math.random() * 250;
-                                }
-                                update() {
-                                    if (!this.active) { if (--this.timer <= 0) this.active = true; return }
-                                    const rad = this.ang * Math.PI / 180;
-                                    this.x += Math.cos(rad) * this.spd; this.y += Math.sin(rad) * this.spd;
-                                    this.op = this.op < this.maxOp ? this.op + .07 : this.op - .06;
-                                    if (this.x > W || this.y > H) this.reset();
-                                }
-                                draw() {
-                                    if (!this.active || this.op <= 0) return;
-                                    const rad = this.ang * Math.PI / 180;
-                                    const grd = ctx.createLinearGradient(this.x, this.y, this.x - Math.cos(rad) * this.len, this.y - Math.sin(rad) * this.len);
-                                    grd.addColorStop(0, 'rgba(255,255,255,.95)'); grd.addColorStop(1, 'transparent');
-                                    ctx.save(); ctx.globalAlpha = Math.max(0, this.op);
-                                    ctx.beginPath(); ctx.moveTo(this.x, this.y);
-                                    ctx.lineTo(this.x - Math.cos(rad) * this.len, this.y - Math.sin(rad) * this.len);
-                                    ctx.strokeStyle = grd; ctx.lineWidth = 1.6; ctx.stroke();
-                                    ctx.beginPath(); ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2);
-                                    ctx.fillStyle = 'rgba(255,255,255,.9)'; ctx.fill();
-                                    ctx.restore();
-                                }
-                            }
-                            const shoots = []; for (let i = 0; i < 6; i++)shoots.push(new Shoot());
+            class Shoot {
+                constructor() { this.reset() }
+                reset() { this.x = Math.random() * W * .5; this.y = Math.random() * H * .35; this.len = 90 + Math.random() * 100; this.spd = 7 + Math.random() * 5; this.ang = 28 + Math.random() * 22; this.op = 0; this.maxOp = .55 + Math.random() * .35; this.active = false; this.timer = Math.random() * 250; }
+                update() { if (!this.active) { if (--this.timer <= 0) this.active = true; return } const rad = this.ang * Math.PI / 180; this.x += Math.cos(rad) * this.spd; this.y += Math.sin(rad) * this.spd; this.op = this.op < this.maxOp ? this.op + .07 : this.op - .06; if (this.x > W || this.y > H) this.reset(); }
+                draw() { if (!this.active || this.op <= 0) return; const rad = this.ang * Math.PI / 180; const grd = ctx.createLinearGradient(this.x, this.y, this.x - Math.cos(rad) * this.len, this.y - Math.sin(rad) * this.len); grd.addColorStop(0, 'rgba(255,255,255,.95)'); grd.addColorStop(1, 'transparent'); ctx.save(); ctx.globalAlpha = Math.max(0, this.op); ctx.beginPath(); ctx.moveTo(this.x, this.y); ctx.lineTo(this.x - Math.cos(rad) * this.len, this.y - Math.sin(rad) * this.len); ctx.strokeStyle = grd; ctx.lineWidth = 1.6; ctx.stroke(); ctx.beginPath(); ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2); ctx.fillStyle = 'rgba(255,255,255,.9)'; ctx.fill(); ctx.restore(); }
+            }
+            const shoots = []; for (let i = 0; i < 6; i++) shoots.push(new Shoot());
 
-                            // ---- ENERGY PARTICLES ----
-                            class Particle {
-                                constructor() { this.reset() }
-                                reset() {
-                                    this.x = Math.random() * W; this.y = Math.random() * H;
-                                    this.r = Math.random() * 2 + .5;
-                                    this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4;
-                                    this.op = Math.random() * .4 + .05;
-                                    this.c = Math.random() < .6 ? '0,240,255' : '150,0,255';
-                                    this.life = Math.random() * 200 + 100; this.age = 0;
-                                }
-                                draw() {
-                                    this.age++; if (this.age > this.life) this.reset();
-                                    const fade = 1 - this.age / this.life;
-                                    ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-                                    ctx.fillStyle = `rgba(${this.c},${this.op * fade})`; ctx.fill();
-                                    this.x += this.vx; this.y += this.vy;
-                                }
-                            }
-                            const particles = []; for (let i = 0; i < 80; i++)particles.push(new Particle());
+            class Particle {
+                constructor() { this.reset() }
+                reset() { this.x = Math.random() * W; this.y = Math.random() * H; this.r = Math.random() * 2 + .5; this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4; this.op = Math.random() * .4 + .05; this.c = Math.random() < .6 ? '0,240,255' : '150,0,255'; this.life = Math.random() * 200 + 100; this.age = 0; }
+                draw() { this.age++; if (this.age > this.life) this.reset(); const fade = 1 - this.age / this.life; ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(${this.c},${this.op * fade})`; ctx.fill(); this.x += this.vx; this.y += this.vy; }
+            }
+            const particles = []; for (let i = 0; i < 80; i++) particles.push(new Particle());
 
-                            function loop() {
-                                ctx.clearRect(0, 0, W, H);
-                                // stars
-                                stars.forEach(s => {
-                                    s.phase += s.tw;
-                                    const op = s.op * (0.45 + 0.55 * Math.sin(s.phase));
-                                    ctx.beginPath(); ctx.arc(s.sx, s.sy, s.r, 0, Math.PI * 2);
-                                    ctx.fillStyle = `rgba(${s.col},${op})`; ctx.fill();
-                                    if (s.r > 1.1) { ctx.beginPath(); ctx.arc(s.sx, s.sy, s.r * 3, 0, Math.PI * 2); ctx.fillStyle = `rgba(${s.col},${op * .1})`; ctx.fill() }
-                                    s.sy -= s.speed; if (s.sy < -4) { s.sy = H + 4; s.sx = Math.random() * W }
-                                });
-                                dnas.forEach(d => d.draw());
-                                atoms.forEach(a => a.draw());
-                                shoots.forEach(s => { s.update(); s.draw() });
-                                particles.forEach(p => p.draw());
-                                requestAnimationFrame(loop);
-                            }
-                            loop();
-                        })();
-                </script>
+            function loop() {
+                ctx.clearRect(0, 0, W, H);
+                stars.forEach(s => { s.phase += s.tw; const op = s.op * (0.45 + 0.55 * Math.sin(s.phase)); ctx.beginPath(); ctx.arc(s.sx, s.sy, s.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(${s.col},${op})`; ctx.fill(); if (s.r > 1.1) { ctx.beginPath(); ctx.arc(s.sx, s.sy, s.r * 3, 0, Math.PI * 2); ctx.fillStyle = `rgba(${s.col},${op * .1})`; ctx.fill() } s.sy -= s.speed; if (s.sy < -4) { s.sy = H + 4; s.sx = Math.random() * W } });
+                dnas.forEach(d => d.draw());
+                atoms.forEach(a => a.draw());
+                shoots.forEach(s => { s.update(); s.draw() });
+                particles.forEach(p => p.draw());
+                requestAnimationFrame(loop);
+            }
+            loop();
+        })();
+    </script>
 </body>
 
 </html>
